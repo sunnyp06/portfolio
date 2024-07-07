@@ -1,16 +1,13 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
-// import { Roboto } from 'next/font/google';
-
-// const roboto = Roboto({
-//   weight: ['300', '400', '500', '700'],
-//   subsets: ['latin'],
-//   display: 'swap',
-// });
 
 const theme = createTheme({
   palette: {
     mode: 'light',
+    background: {
+      default: 'linear-gradient(to right bottom, #430089, #82ffa1)',
+      paper: 'linear-gradient(to right bottom, #430089, #82ffa1)',
+    }
   },
   typography: {
     // TODO figure out which font to use
