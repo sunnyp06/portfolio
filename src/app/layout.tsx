@@ -22,22 +22,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <html>
+        <body
+        // style={{
+        //   background: "linear-gradient(to top, #DCDCDC, #FFFFFF)",
+        //   minHeight: "100vh",
+        // }}
+        >
           <NavBar />
           <Container
             maxWidth="lg"
             sx={{
               mt: 20,
+              minHeight: "100%",
             }}
           >
             {children}
           </Container>
-        </ThemeProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }
