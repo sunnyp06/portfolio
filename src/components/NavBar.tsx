@@ -19,7 +19,7 @@ const menuItemStyle = {
 const links = [
   { href: "/", label: "Work" },
   { href: "/about-me", label: "About" },
-  { href: "/contact", label: "Contact" },
+  // { href: "/contact", label: "Contact" },
 ];
 
 function NavBar() {

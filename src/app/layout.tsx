@@ -23,13 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <CssBaseline />
       <html>
         <body
         // style={{
-        //   background: "linear-gradient(to top, #DCDCDC, #FFFFFF)",
-        //   minHeight: "100vh",
+        //   background: "linear-gradient(to top, #C0C0C0, #FFFFFF)",
+        //   minHeight: "200vh",
         // }}
         >
           <NavBar />
