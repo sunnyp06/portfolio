@@ -34,7 +34,7 @@ export default function RootLayout({
         >
           <NavBar />
           <Container
-            maxWidth="lg"
+            maxWidth="xl"
             sx={{
               mt: 20,
               minHeight: "100%",
