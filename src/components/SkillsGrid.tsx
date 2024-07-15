@@ -7,7 +7,8 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 const paperStyle = { px: 2, py: 2 };
 const iconStyle = {
-  bgcolor: "primary.main",
+  // bgcolor: "primary.main",
+  bgcolor: "black",
   borderRadius: "30px",
   px: 2,
   py: 1,
@@ -17,13 +18,13 @@ const iconStyle = {
 function SkillsGrid() {
   return (
     <Grid2 container spacing={2} sx={{ mt: 20, mb: 4 }}>
-      <Grid2 sm={12} md={4}>
+      <Grid2 xs={12} sm={12} md={4}>
         <FrontEndPaper />
       </Grid2>
-      <Grid2 sm={12} md={4}>
+      <Grid2 xs={12} sm={12} md={4}>
         <BackendPaper />
       </Grid2>
-      <Grid2 sm={12} md={4}>
+      <Grid2 xs={12} sm={12} md={4}>
         <QuantitativeProductPaper />
       </Grid2>
     </Grid2>
@@ -160,7 +161,7 @@ function QuantitativeProductPaper() {
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1" align="center">
             I&apos;ve worked across diverse domains in technology and finance to
-            support investment and cross-functional product teams.
+            support investment, research, and cross-functional product teams.
           </Typography>
         </Grid2>
         <Grid2
@@ -179,6 +180,14 @@ function QuantitativeProductPaper() {
               {tool}
             </Typography>
           ))}
+        </Grid2>
+        <Grid2 xs={12} display="flex" justifyContent="center">
+          <Typography variant="body1">
+            <span style={{ color: theme.palette.primary.main }}>
+              Tools:&nbsp;
+            </span>
+            Pandas, SciPy, scikit learn
+          </Typography>
         </Grid2>
       </Grid2>
     </Paper>
