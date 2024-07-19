@@ -2,11 +2,21 @@
 import CodeIcon from "@mui/icons-material/Code";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
 import WebIcon from "@mui/icons-material/Web";
-import { Paper, Typography, useTheme } from "@mui/material";
+import { Paper, SxProps, Typography, useTheme } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
-const paperStyle = { px: 2, py: 2 };
-const iconStyle = {
+const paperStyle: SxProps = {
+  px: 2,
+  py: 2,
+  borderRadius: "20px",
+  boxShadow: "0 0 20px 0 rgba(0,0,0,0.06)",
+  transition: "0.3s",
+  "&:hover": {
+    transform: "translateY(-3px)",
+    boxShadow: "0 4px 20px 0 rgba(0,0,0,0.06)",
+  },
+};
+const iconStyle: SxProps = {
   // bgcolor: "primary.main",
   bgcolor: "black",
   borderRadius: "30px",
@@ -60,11 +70,8 @@ function FrontEndPaper() {
           flexDirection="column"
         >
           <Typography variant="body1" align="center">
-            <span style={{ color: theme.palette.primary.main }}>
-              Technologies & Tools:&nbsp;
-            </span>
+            <span style={{ fontWeight: 500 }}>Technologies & Tools:&nbsp;</span>
           </Typography>
-          {/* {technologiesAndTools.join("\n")} */}
           {technologiesAndTools.map((tool, index) => (
             <Typography key={index} variant="body1" align="center">
               {tool}
@@ -77,7 +84,8 @@ function FrontEndPaper() {
 }
 
 function BackendPaper() {
-  const theme = useTheme();
+  // change color?
+  // const theme = useTheme();
   const technologiesAndTools = [
     "Git",
     "Spring",
@@ -102,17 +110,13 @@ function BackendPaper() {
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1">
-            <span style={{ color: theme.palette.primary.main }}>
-              Languages:&nbsp;
-            </span>
+            <span style={{ fontWeight: 500 }}>Languages:&nbsp;</span>
             Python, Java, SQL, C
           </Typography>
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1" align="center">
-            <span style={{ color: theme.palette.primary.main }}>
-              Data:&nbsp;
-            </span>
+            <span style={{ fontWeight: 500 }}>Data:&nbsp;</span>
             OLTP databases, data warehouses, dbt, replication, migration
             frameworks
           </Typography>
@@ -124,9 +128,7 @@ function BackendPaper() {
           flexDirection="column"
         >
           <Typography variant="body1" align="center">
-            <span style={{ color: theme.palette.primary.main }}>
-              Technologies & Tools:&nbsp;
-            </span>
+            <span style={{ fontWeight: 500 }}>Technologies & Tools:&nbsp;</span>
           </Typography>
           {technologiesAndTools.map((tool, index) => (
             <Typography key={index} variant="body1" align="center">
@@ -171,9 +173,7 @@ function QuantitativeProductPaper() {
           flexDirection="column"
         >
           <Typography variant="body1" align="center">
-            <span style={{ color: theme.palette.primary.main }}>
-              Skills:&nbsp;
-            </span>
+            <span style={{ fontWeight: 500 }}>Skills:&nbsp;</span>
           </Typography>
           {skills.map((tool, index) => (
             <Typography key={index} variant="body1" align="center">
@@ -183,9 +183,7 @@ function QuantitativeProductPaper() {
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1">
-            <span style={{ color: theme.palette.primary.main }}>
-              Tools:&nbsp;
-            </span>
+            <span style={{ fontWeight: 500 }}>Tools:&nbsp;</span>
             Pandas, SciPy, scikit learn
           </Typography>
         </Grid2>

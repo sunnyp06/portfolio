@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import theme from "@/theme";
 import { Container, CssBaseline } from "@mui/material";
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider theme={theme}>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      {/* CssBaseline to kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
       <html>
         <body
@@ -41,6 +42,7 @@ export default function RootLayout({
             }}
           >
             {children}
+            <Footer />
           </Container>
         </body>
       </html>

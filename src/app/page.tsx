@@ -1,5 +1,5 @@
 import SkillsGrid from "@/components/SkillsGrid";
-import { Divider, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         </Typography> */}
       </Stack>
       <SkillsGrid />
-      <Divider />
+      {/* <SelectedProjects /> */}
     </main>
   );
 }
