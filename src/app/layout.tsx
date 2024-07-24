@@ -25,7 +25,7 @@ export default function RootLayout({
     <ThemeProvider theme={theme}>
       {/* CssBaseline to kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
-      <html>
+      <html lang="en">
         <body
         // TODO add colorful animated gradient
         // style={{
