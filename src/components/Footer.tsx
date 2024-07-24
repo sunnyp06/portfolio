@@ -8,7 +8,7 @@ import IconLink from "./IconLink";
 
 const Footer: React.FC = () => {
   return (
-    <Container sx={{ minHeight: "15vh", mx: 0, py: 2 }} maxWidth="xl">
+    <Container sx={{ minHeight: "15vh", py: 4 }} maxWidth="xl">
       <Divider />
       <Grid2 container spacing={2} sx={{ py: 2 }}>
         <Grid2 xs={12} sm="auto" display="flex" alignItems="center">

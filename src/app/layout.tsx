@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import theme from "@/theme";
-import { Container, CssBaseline } from "@mui/material";
+import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import type { Metadata } from "next";
 
@@ -34,15 +34,7 @@ export default function RootLayout({
         // }}
         >
           <NavBar />
-          <Container
-            maxWidth="xl"
-            sx={{
-              mt: 20,
-              minHeight: "100%",
-            }}
-          >
-            {children}
-          </Container>
+          {children}
           <Footer />
         </body>
       </html>
