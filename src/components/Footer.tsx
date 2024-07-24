@@ -8,49 +8,43 @@ import IconLink from "./IconLink";
 
 const Footer: React.FC = () => {
   return (
-    <>
+    <Container sx={{ minHeight: "15vh", mx: 0, py: 2 }} maxWidth="xl">
       <Divider />
-      <Container
-        sx={{ minHeight: "15vh", mx: 0, py: 2 }}
-        maxWidth={false}
-        disableGutters
-      >
-        <Grid2 container spacing={2}>
-          <Grid2 xs={12} sm="auto" display="flex" alignItems="center">
-            <Typography variant="body2" align="left">
-              Handcrafted by Sunny Ughareja. Source code
-            </Typography>
-            <IconLink
-              href="https://github.com/sunnyp06/portfolio"
-              icon={GitHubIcon}
-              fontSize={20}
-            />
-          </Grid2>
-          <Grid2
-            xs={12}
-            xsOffset={0}
-            sm="auto"
-            smOffset="auto"
-            display="flex"
-            alignItems="center"
-          >
-            <Typography variant="body2" align="left">
-              sunnyp06@gmail.com
-            </Typography>
-            <IconLink
-              href="mailto:sunnyp06@gmail.com"
-              icon={EmailIcon}
-              fontSize={20}
-            />
-            <IconLink
-              href="https://www.linkedin.com/in/sunny-ughareja/"
-              icon={LinkedInIcon}
-              fontSize={20}
-            />
-          </Grid2>
+      <Grid2 container spacing={2} sx={{ py: 2 }}>
+        <Grid2 xs={12} sm="auto" display="flex" alignItems="center">
+          <Typography variant="body2" align="left">
+            Handcrafted by Sunny Ughareja. Source code
+          </Typography>
+          <IconLink
+            href="https://github.com/sunnyp06/portfolio"
+            icon={GitHubIcon}
+            fontSize={20}
+          />
         </Grid2>
-      </Container>
-    </>
+        <Grid2
+          xs={12}
+          xsOffset={0}
+          sm="auto"
+          smOffset="auto"
+          display="flex"
+          alignItems="center"
+        >
+          <Typography variant="body2" align="left">
+            sunnyp06@gmail.com
+          </Typography>
+          <IconLink
+            href="mailto:sunnyp06@gmail.com"
+            icon={EmailIcon}
+            fontSize={20}
+          />
+          <IconLink
+            href="https://www.linkedin.com/in/sunny-ughareja/"
+            icon={LinkedInIcon}
+            fontSize={20}
+          />
+        </Grid2>
+      </Grid2>
+    </Container>
   );
 };
 

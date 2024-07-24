@@ -2,22 +2,22 @@
 import CodeIcon from "@mui/icons-material/Code";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
 import WebIcon from "@mui/icons-material/Web";
-import { Paper, SxProps, Typography, useTheme } from "@mui/material";
+import { Paper, SxProps, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 const paperStyle: SxProps = {
   px: 2,
   py: 2,
   borderRadius: "20px",
-  boxShadow: "0 0 20px 0 rgba(0,0,0,0.06)",
-  transition: "0.3s",
-  "&:hover": {
-    transform: "translateY(-3px)",
-    boxShadow: "0 4px 20px 0 rgba(0,0,0,0.06)",
-  },
+  boxShadow: "0 0 10px 0 rgba(0,0,0,0.06)",
+  // animation to slightly move the box vertically on hover
+  // transition: "0.3s",
+  // "&:hover": {
+  //   transform: "translateY(-3px)",
+  //   boxShadow: "0 4px 20px 0 rgba(0,0,0,0.06)",
+  // },
 };
 const iconStyle: SxProps = {
-  // bgcolor: "primary.main",
   bgcolor: "black",
   borderRadius: "30px",
   px: 2,
@@ -29,24 +29,24 @@ function SkillsGrid() {
   return (
     <Grid2 container spacing={2} sx={{ mt: 20, mb: 4 }}>
       <Grid2 xs={12} sm={12} md={4}>
-        <FrontEndPaper />
+        <FrontEnd />
       </Grid2>
       <Grid2 xs={12} sm={12} md={4}>
-        <BackendPaper />
+        <Backend />
       </Grid2>
       <Grid2 xs={12} sm={12} md={4}>
-        <QuantitativeProductPaper />
+        <QuantitativeAndProduct />
       </Grid2>
     </Grid2>
   );
 }
 
-function FrontEndPaper() {
-  const theme = useTheme();
+function FrontEnd() {
   const technologiesAndTools = [
     "React",
     "Redux",
     "Next.js",
+    "Node.js",
     "plotly Dash",
     "Bootstrap CSS",
     "Material UI",
@@ -83,9 +83,7 @@ function FrontEndPaper() {
   );
 }
 
-function BackendPaper() {
-  // change color?
-  // const theme = useTheme();
+function Backend() {
   const technologiesAndTools = [
     "Git",
     "Spring",
@@ -141,8 +139,7 @@ function BackendPaper() {
   );
 }
 
-function QuantitativeProductPaper() {
-  const theme = useTheme();
+function QuantitativeAndProduct() {
   const skills = [
     "Data visualization",
     "Time series analysis",
@@ -157,7 +154,7 @@ function QuantitativeProductPaper() {
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="h6" align="center">
-            Quantitative & Product
+            Product & Quantitative
           </Typography>
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
