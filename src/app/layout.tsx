@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
 import theme from "@/theme";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
@@ -33,7 +32,8 @@ export default function RootLayout({
         //   minHeight: "200vh",
         // }}
         >
-          <NavBar />
+          {/* TODO add back navbar once About page is finished */}
+          {/* <NavBar /> */}
           {children}
           <Footer />
         </body>
