@@ -32,4 +32,8 @@ const theme = createTheme({
   },
 });
 
+// set the min height of the box containing the header to be slightly larger so contents do not shift on typewriter effect
+const h1Rem = String(theme.typography.h1.fontSize);
+export const headingMinHeight = `${Number(h1Rem.substring(0, h1Rem.indexOf("rem"))) + 1}rem`;
+
 export default theme;

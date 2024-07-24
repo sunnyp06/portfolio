@@ -1,4 +1,5 @@
 import SkillsGrid from "@/components/SkillsGrid";
+import { headingMinHeight } from "@/theme";
 import { Container, Stack, Typography } from "@mui/material";
 import { Typewriter } from "nextjs-simple-typewriter";
 
@@ -12,7 +13,7 @@ export default function Home() {
         }}
       >
         <Stack spacing={2}>
-          <Typography variant="h1" align="center">
+          <Typography variant="h1" align="center" minHeight={headingMinHeight}>
             <Typewriter words={["Hi, I'm Sunny."]} typeSpeed={70}></Typewriter>
           </Typography>
           <Typography variant="h4" align="center">
