@@ -27,6 +27,7 @@ export default function RootLayout({
       <CssBaseline />
       <html>
         <body
+        // TODO add colorful animated gradient
         // style={{
         //   background: "linear-gradient(to top, #C0C0C0, #FFFFFF)",
         //   minHeight: "200vh",

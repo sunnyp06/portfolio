@@ -21,10 +21,23 @@ const IconLink: React.FC<IconLinkProps> = ({
     rel="noopener"
     display="flex"
     alignItems="center"
-    color="inherit"
-    sx={{ ml: 0.5, ...sx }}
+    color="primary.main"
+    sx={{
+      ml: 1,
+      // animation to slightly move the box vertically
+      transition: "0.3s",
+      "&:hover": {
+        transform: "translateY(-3px)",
+        color: "secondary.main",
+      },
+      ...sx,
+    }}
   >
-    <Icon sx={{ fontSize: fontSize }} />
+    <Icon
+      sx={{
+        fontSize: fontSize,
+      }}
+    />
   </Link>
 );
 

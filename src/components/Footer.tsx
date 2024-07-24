@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           <IconLink
             href="https://github.com/sunnyp06/portfolio"
             icon={GitHubIcon}
-            fontSize={20}
+            fontSize={24}
           />
         </Grid2>
         <Grid2
@@ -35,12 +35,12 @@ const Footer: React.FC = () => {
           <IconLink
             href="mailto:sunnyp06@gmail.com"
             icon={EmailIcon}
-            fontSize={20}
+            fontSize={24}
           />
           <IconLink
             href="https://www.linkedin.com/in/sunny-ughareja/"
             icon={LinkedInIcon}
-            fontSize={20}
+            fontSize={24}
           />
         </Grid2>
       </Grid2>

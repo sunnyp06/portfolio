@@ -15,7 +15,7 @@ export default function Home() {
           <Typography variant="h1" align="center">
             <Typewriter words={["Hi, I'm Sunny."]} typeSpeed={70}></Typewriter>
           </Typography>
-          <Typography variant="h5" align="center">
+          <Typography variant="h4" align="center">
             A Product-minded Full Stack Developer.
           </Typography>
         </Stack>

@@ -10,12 +10,6 @@ const paperStyle: SxProps = {
   py: 2,
   borderRadius: "20px",
   boxShadow: "0 0 10px 0 rgba(0,0,0,0.06)",
-  // animation to slightly move the box vertically on hover
-  // transition: "0.3s",
-  // "&:hover": {
-  //   transform: "translateY(-3px)",
-  //   boxShadow: "0 4px 20px 0 rgba(0,0,0,0.06)",
-  // },
 };
 const iconStyle: SxProps = {
   bgcolor: "black",
@@ -59,7 +53,7 @@ function FrontEnd() {
           <WebIcon fontSize="large" htmlColor="white" sx={iconStyle} />
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
-          <Typography variant="h6" align="center">
+          <Typography variant="h5" align="center">
             Frontend
           </Typography>
         </Grid2>
@@ -104,7 +98,7 @@ function Backend() {
           <CodeIcon fontSize="large" htmlColor="white" sx={iconStyle} />
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
-          <Typography variant="h6">Backend</Typography>
+          <Typography variant="h5">Backend</Typography>
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1">
@@ -153,7 +147,7 @@ function QuantitativeAndProduct() {
           <SsidChartIcon fontSize="large" htmlColor="white" sx={iconStyle} />
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
-          <Typography variant="h6" align="center">
+          <Typography variant="h5" align="center">
             Product & Quantitative
           </Typography>
         </Grid2>
