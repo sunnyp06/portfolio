@@ -64,7 +64,7 @@ function FrontEnd() {
           flexDirection="column"
         >
           <Typography variant="body1" align="center">
-            <span style={{ fontWeight: 500 }}>Technologies & Tools:&nbsp;</span>
+            <span style={{ fontWeight: 600 }}>Technologies & Tools:&nbsp;</span>
           </Typography>
           {technologiesAndTools.map((tool, index) => (
             <Typography key={index} variant="body1" align="center">
@@ -102,13 +102,13 @@ function Backend() {
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1">
-            <span style={{ fontWeight: 500 }}>Languages:&nbsp;</span>
+            <span style={{ fontWeight: 600 }}>Languages:&nbsp;</span>
             Python, Java, SQL, C
           </Typography>
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1" align="center">
-            <span style={{ fontWeight: 500 }}>Data:&nbsp;</span>
+            <span style={{ fontWeight: 600 }}>Data:&nbsp;</span>
             OLTP databases, data warehouses, dbt, replication, migration
             frameworks
           </Typography>
@@ -120,7 +120,7 @@ function Backend() {
           flexDirection="column"
         >
           <Typography variant="body1" align="center">
-            <span style={{ fontWeight: 500 }}>Technologies & Tools:&nbsp;</span>
+            <span style={{ fontWeight: 600 }}>Technologies & Tools:&nbsp;</span>
           </Typography>
           {technologiesAndTools.map((tool, index) => (
             <Typography key={index} variant="body1" align="center">
@@ -164,7 +164,7 @@ function QuantitativeAndProduct() {
           flexDirection="column"
         >
           <Typography variant="body1" align="center">
-            <span style={{ fontWeight: 500 }}>Skills:&nbsp;</span>
+            <span style={{ fontWeight: 600 }}>Skills:&nbsp;</span>
           </Typography>
           {skills.map((tool, index) => (
             <Typography key={index} variant="body1" align="center">
@@ -174,7 +174,7 @@ function QuantitativeAndProduct() {
         </Grid2>
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1">
-            <span style={{ fontWeight: 500 }}>Tools:&nbsp;</span>
+            <span style={{ fontWeight: 600 }}>Tools:&nbsp;</span>
             Pandas, SciPy, scikit learn
           </Typography>
         </Grid2>

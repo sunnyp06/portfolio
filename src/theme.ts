@@ -1,5 +1,9 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
+import { Montserrat } from 'next/font/google';
+ 
+// If loading a variable font, you don't need to specify the font weight
+const font = Montserrat({ subsets: ['latin'] })
 
 const theme = createTheme({
   palette: {
@@ -10,14 +14,10 @@ const theme = createTheme({
     }
   },
   typography: {
-    // TODO figure out which font to use
     fontFamily: [
-        // 'Futura',
-        // 'gt planar',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-      ].join(','),
+      font.style.fontFamily,
+      'Helvetica Neue',
+    ].join(','),
   },
   components: {
     MuiAlert: {
