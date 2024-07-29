@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import theme from "@/theme";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,7 +27,6 @@ export default function RootLayout({
       {/* CssBaseline to kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
       <html lang="en">
-        <GoogleTagManager gtmId="G-QHK4EE98YR" />
         <body
         // TODO add colorful animated gradient
         // style={{
@@ -40,6 +39,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </body>
+        <GoogleAnalytics gaId="G-QHK4EE98YR" />
       </html>
     </ThemeProvider>
   );
