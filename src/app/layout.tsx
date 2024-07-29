@@ -2,8 +2,8 @@ import Footer from "@/components/Footer";
 import theme from "@/theme";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Sunny Ughareja - Software Engineer",
@@ -27,6 +27,18 @@ export default function RootLayout({
       {/* CssBaseline to kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
       <html lang="en">
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-QHK4EE98YR"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QHK4EE98YR');
+        `}
+        </Script>
         <body
         // TODO add colorful animated gradient
         // style={{
@@ -39,7 +51,6 @@ export default function RootLayout({
           {children}
           <Footer />
         </body>
-        <GoogleAnalytics gaId="G-QHK4EE98YR" />
       </html>
     </ThemeProvider>
   );
