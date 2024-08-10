@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import NavBar from "@/components/NavBar";
 import theme from "@/theme";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
@@ -37,7 +38,7 @@ export default function RootLayout({
         // }}
         >
           {/* TODO add back navbar once About page is finished */}
-          {/* <NavBar /> */}
+          <NavBar />
           {children}
           <Footer />
           <VercelAnalytics />
