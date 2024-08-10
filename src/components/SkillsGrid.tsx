@@ -109,7 +109,7 @@ function Backend() {
         <Grid2 xs={12} display="flex" justifyContent="center">
           <Typography variant="body1" align="center">
             <span style={{ fontWeight: 600 }}>Data:&nbsp;</span>
-            OLTP databases, data warehouses, dbt, replication, migration
+            RDBMS, OLTP databases, data warehouses, dbt, replication, migration
             frameworks
           </Typography>
         </Grid2>
