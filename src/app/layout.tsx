@@ -37,7 +37,6 @@ export default function RootLayout({
         //   minHeight: "200vh",
         // }}
         >
-          {/* TODO add back navbar once About page is finished */}
           <NavBar />
           {children}
           <Footer />
