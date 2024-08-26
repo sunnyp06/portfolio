@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       {/* TODO keep divider or not */}
       {/* <Divider /> */}
       <Grid2 container spacing={2} sx={{ py: 2 }}>
-        <Grid2 xs={12} sm="auto" display="flex" alignItems="center">
+        <Grid2 sm={12} md="auto" display="flex" alignItems="center">
           <Typography variant="body2" align="left">
             Handcrafted by Sunny Ughareja. Source code
           </Typography>
