@@ -1,0 +1,77 @@
+"use client";
+import { CardActionArea, Modal } from "@mui/material";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+
+export type ModalCardProps = {
+  onClose?: () => void;
+};
+
+export type AnimatedCardProps = {
+  id: string;
+  PreviewCard: React.FC<ModalCardProps>;
+  ModalCard: React.FC<ModalCardProps>;
+};
+
+export default function AnimatedCard({
+  id,
+  PreviewCard,
+  ModalCard,
+}: AnimatedCardProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+
+  return (
+    <>
+      <motion.div layoutId={`expandable-card-${id}`}>
+        <CardActionArea
+          sx={{
+            borderRadius: "20px",
+            boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+            transition: "0.2s",
+            "&:hover": {
+              transform: "scale(1.08)",
+              boxShadow: `0 6px 12px 0 rgba(0,0,0,0.3)`,
+            },
+          }}
+          onClick={handleOpen}
+        >
+          <PreviewCard />
+        </CardActionArea>
+      </motion.div>
+
+      <Modal
+        open={isOpen}
+        onClose={handleClose}
+        closeAfterTransition
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <AnimatePresence mode="sync">
+          {isOpen && (
+            <motion.div
+              layoutId={`expandable-card-${id}`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.2 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                position: "absolute",
+                overflow: "auto",
+                backgroundColor: "white",
+                borderRadius: "20px",
+              }}
+            >
+              <ModalCard onClose={handleClose} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Modal>
+    </>
+  );
+}
