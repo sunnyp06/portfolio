@@ -37,16 +37,14 @@ export default function AboutMe() {
                 I&apos;m a software engineer based in NYC.
               </Typography>
               <Typography variant="body1">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived
-                not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged.
+                I work best with teams that promote excellence and encourage
+                collaboration. I like to move fast and keep project goals,
+                commercial impact and customer value at the center of decision
+                making.
               </Typography>
               <Typography variant="body1">
-                Outside work, you can find me running, climbing, or listening to
-                or making music.
+                Outside work, you can find me running, climbing, seeing live
+                music, or traveling.
               </Typography>
             </Stack>
           </Grid2>
