@@ -1,10 +1,11 @@
+import IconLink from "@/components/IconLink";
+import LooksOneIcon from "@mui/icons-material/LooksOne";
+import LooksTwoIcon from "@mui/icons-material/LooksTwo";
 import { Box, Typography } from "@mui/material";
-import Link from "next/link";
 import AltruistLogo from "../../../public/altruist.svg";
 import BamLogo from "../../../public/bam.png";
 import { ModalCardProps } from "./ModalCard";
 import { PreviewCardProps } from "./PreviewCard";
-
 export interface CardConfig {
   id: string;
   previewCard: PreviewCardProps;
@@ -12,7 +13,7 @@ export interface CardConfig {
 }
 
 export const projectCardConfig: Record<string, CardConfig> = {
-  altruist1: {
+  portfolioAnalytics: {
     id: "portfolio-analytics",
     previewCard: {
       imageSrc: AltruistLogo,
@@ -42,29 +43,31 @@ export const projectCardConfig: Record<string, CardConfig> = {
           </Typography>
           <Box component="ul" sx={{ mt: 2, mb: 2 }}>
             <Typography component="li">
-              Collaborating with product managers to determine critical
-              statistics and metrics for display
+              Collaborating with the product manager and designer to refine the
+              selection and visualization of statistics and metrics.
             </Typography>
             <Typography component="li">
-              Researching and configuring required vendor data feeds for asset
-              class, sector, regional breakdowns, size and style exposures,
-              credit ratings, and performance metrics
+              Researching and configuring the required vendor data feeds for
+              asset class, sector, regional breakdowns, size and style
+              exposures, credit ratings, and performance metrics.
             </Typography>
             <Typography component="li">
-              Helping to design and implement a robust data pipeline, balancing
-              performance, cost, and effort
+              Helping to design and implement a robust, scale-able data ETL
+              pipeline using Airflow DAGs, S3, Snowflake, PostgreSQL, fivetran
+              (replication), and dbt, balancing extensibility, cost, and level
+              of effort.
             </Typography>
             <Typography component="li">
-              Developing a flexible backend API to handle analysis on accounts,
-              households, benchmarks, and model portfolios
+              Leading the team by developing the backend business logic, within
+              a flexible framework to handle analysis on accounts, households,
+              benchmarks, and model portfolios, serving as the example for the
+              team to replicate.
             </Typography>
             <Typography component="li">
               Creating a centralized performance analytics library to ensure
-              consistency across the platform
-            </Typography>
-            <Typography component="li">
-              Implementing financial calculations including time-weighted
-              returns, volatility, Sharpe ratio, and more
+              consistency across the platform for metrics such as time-weighted
+              returns, volatility, Sharpe ratio, capture ratios, max drawdown,
+              beta etc.
             </Typography>
           </Box>
           <Typography variant="body1" paragraph>
@@ -74,13 +77,19 @@ export const projectCardConfig: Record<string, CardConfig> = {
             decision-making capabilities for financial advisors and their
             clients.
           </Typography>
-          {/* TODO adjust below */}
-          <Link
-            href="https://altruist.com/portfolio-reporting/#:~:text=with%20appropriate%20context.-,Portfolio%20analytics,-Visualize%20portfolio%20risk"
-            target="_blank"
-          >
-            Link to feature preview
-          </Link>
+          <Typography variant="body1" paragraph display="flex">
+            Learn more about Altruist&apos;s Portfolio Analytics:
+            <IconLink
+              href="https://altruist.com/portfolio-reporting/#:~:text=with%20appropriate%20context.-,Portfolio%20analytics,-Visualize%20portfolio%20risk"
+              icon={LooksOneIcon}
+              fontSize={24}
+            />
+            <IconLink
+              href="https://blog.altruist.com/news/whats-new-in-may#:~:text=Advanced%20Analytics%20upgrades"
+              icon={LooksTwoIcon}
+              fontSize={24}
+            />
+          </Typography>
         </Box>
       ),
     },
@@ -157,3 +166,12 @@ export const projectCardConfig: Record<string, CardConfig> = {
     },
   },
 };
+
+// holdings performance
+{
+  /* <IconLink
+href="https://blog.altruist.com/news/whats-new-in-august#:~:text=seat%20here.-,Newly%20added%20holdings%2Dlevel%20performance,-Say%20hello%20to"
+icon={LooksOneIcon}
+fontSize={24}
+/> */
+}

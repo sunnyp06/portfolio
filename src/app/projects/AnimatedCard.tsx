@@ -53,6 +53,7 @@ export default function AnimatedCard({
         maxWidth="md"
         fullWidth
         closeAfterTransition
+        keepMounted
         PaperProps={{
           sx: {
             ...(!fullScreen && { borderRadius: "20px" }),
