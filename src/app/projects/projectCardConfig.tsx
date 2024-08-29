@@ -9,7 +9,7 @@ import { PreviewCardProps } from "./PreviewCard";
 export interface CardConfig {
   id: string;
   previewCard: PreviewCardProps;
-  modalCard: Omit<ModalCardProps, "onClose" | "fullScreen">;
+  modalCard: Omit<ModalCardProps, "handleClose" | "fullScreen">;
 }
 
 export const projectCardConfig: Record<string, CardConfig> = {
@@ -41,7 +41,7 @@ export const projectCardConfig: Record<string, CardConfig> = {
           <Typography variant="body1" paragraph>
             My key contributions to the project included:
           </Typography>
-          <Box component="ul" sx={{ mt: 2, mb: 2 }}>
+          <Box component="ul" sx={{ my: 2 }}>
             <Typography component="li">
               Collaborating with the product manager and designer to refine the
               selection and visualization of statistics and metrics.
@@ -94,6 +94,104 @@ export const projectCardConfig: Record<string, CardConfig> = {
       ),
     },
   },
+  ragResearchArticles: {
+    id: "rag-research-articles",
+    previewCard: {
+      imageSrc: BamLogo,
+      imageAlt: "Balyasny Asset Management logo",
+      year: "2024",
+      eyebrow: "Balyasny Asset Management",
+      title: "AI-Powered Research Article Search",
+      subtitle:
+        "A system for intelligent search and summarization of research articles using Retrieval Augmented Generation and vector-embeddings based search techniques.",
+    },
+    modalCard: {
+      imageSrc: BamLogo,
+      imageAlt: "Balyasny Asset Management logo",
+      imageHref: "https://www.bamfunds.com/",
+      eyebrow: "Balyasny Asset Management",
+      title: "AI-Powered Research Article Search",
+      Content: () => (
+        <Box>
+          <Typography variant="body1" paragraph>
+            At Balyasny Asset Management, I developed an advanced research
+            article query API and UI that combined Retrieval Augmented
+            Generation (RAG) with vector-embeddings based search and traditional
+            tag-based search. This project significantly improved the efficiency
+            of accessing and understanding vast amounts of research data
+            available to the firm.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Key features of the system included:
+          </Typography>
+          <Box component="ul" sx={{ my: 2 }}>
+            <Typography component="li">
+              RAG using research articles for summaries and answers to user
+              queries, with source citations.
+            </Typography>
+            <Typography component="li">
+              Vector-embeddings based search for highly relevant results.
+            </Typography>
+            <Typography component="li">
+              Traditional tag-based search with a tag expansion algorithm for
+              broader and more customizable coverage.
+            </Typography>
+            <Typography component="li">
+              A user-friendly interface displaying AI responses, source
+              citations, and search results side-by-side.
+            </Typography>
+            <Typography component="li">
+              Customizable search filters for refining results.
+            </Typography>
+          </Box>
+          <Typography variant="body1" paragraph>
+            The project involved:
+          </Typography>
+          <Box component="ul" sx={{ my: 2 }}>
+            <Typography component="li">
+              Implementing RAG using OpenAI&apos;s API for generating
+              context-aware article summaries and answering user queries
+            </Typography>
+            <Typography component="li">
+              Extensive prompt engineering to optimize LLM responses, including
+              experimenting with various prompts and creating examples of ideal
+              responses to ensure correct formatting with accurate citations.
+            </Typography>
+            <Typography component="li">
+              Building a responsive frontend to display results effectively
+            </Typography>
+            <Typography component="li">
+              Developing a Slack bot that used the newly created API for daily
+              scheduled summaries of new articles, partitioned by
+              market/product, leveraging prompt engineering to generate
+              responses in Slack&apos;s Block Kit format for rich formatting.
+            </Typography>
+          </Box>
+          <Typography variant="body1" paragraph>
+            The system significantly improved the research process at Balyasny,
+            allowing analysts to quickly find relevant information and gain
+            AI-augmented insights from a vast repository of research articles.
+            It became an essential tool for informed decision-making across
+            various investment teams.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            The date filter feature proved especially useful for getting quick
+            summaries of recent developments across a broad range of markets.
+            This capability, combined with the daily Slack summaries, enabled
+            analysts to stay up-to-date with the latest market trends and
+            research findings efficiently.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            [Placeholder for visual mock: An image showcasing the user interface
+            with the RAG-generated summary and source citations on one side, and
+            vector-embeddings based search results on the other. The mock will
+            also highlight the search filters available to users for refining
+            their queries.]
+          </Typography>
+        </Box>
+      ),
+    },
+  },
   bam: {
     id: "factors",
     previewCard: {
@@ -123,7 +221,7 @@ export const projectCardConfig: Record<string, CardConfig> = {
           <Typography variant="body1" paragraph>
             Key components of the project included:
           </Typography>
-          <Box component="ul" sx={{ mt: 2, mb: 2 }}>
+          <Box component="ul" sx={{ my: 2 }}>
             <Typography component="li">
               Collaborating with a senior quantitative researcher to refine the
               model&apos;s technical specifications

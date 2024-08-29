@@ -14,7 +14,7 @@ export interface ModalCardProps {
   title: string;
   Content: React.FC;
   fullScreen: boolean;
-  onClose: () => void;
+  handleClose: () => void;
 }
 
 const ModalCard: React.FC<ModalCardProps> = ({
@@ -25,7 +25,7 @@ const ModalCard: React.FC<ModalCardProps> = ({
   title,
   Content,
   fullScreen,
-  onClose,
+  handleClose,
 }) => (
   <Card variant="outlined">
     <Box>
@@ -58,7 +58,7 @@ const ModalCard: React.FC<ModalCardProps> = ({
           </Link>
         </Box>
         <Button
-          onClick={onClose}
+          onClick={handleClose}
           sx={{ borderRadius: "20px", p: 0, minWidth: 0 }}
         >
           <CloseIcon sx={{ m: 1 }} />

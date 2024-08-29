@@ -5,20 +5,20 @@ import { useState } from "react";
 
 export type ModalCardProps = {
   fullScreen: boolean;
-  onClose: () => void;
+  handleClose: () => void;
 };
 
-export type AnimatedCardProps = {
+export type CardAnimatedToModalProps = {
   id: string;
   PreviewCard: React.FC;
   ModalCard: React.FC<ModalCardProps>;
 };
 
-export default function AnimatedCard({
+export default function CardAnimatedToModal({
   id,
   PreviewCard,
   ModalCard,
-}: AnimatedCardProps) {
+}: CardAnimatedToModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => setIsOpen(true);
@@ -80,7 +80,7 @@ export default function AnimatedCard({
                 backgroundColor: "white",
               }}
             >
-              <ModalCard fullScreen={fullScreen} onClose={handleClose} />
+              <ModalCard fullScreen={fullScreen} handleClose={handleClose} />
             </motion.div>
           )}
         </AnimatePresence>
