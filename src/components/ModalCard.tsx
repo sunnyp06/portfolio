@@ -1,36 +1,35 @@
-"use client";
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import { Box, Button, Card, CardContent } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import React from "react";
-import {
-  Info,
-  InfoEyebrow,
-  InfoSubtitle,
-  InfoTitle,
-} from "../mui-treasury/info-basic";
+import { Info, InfoEyebrow, InfoTitle } from "../mui-treasury/info-basic";
 import { getInfoN03Styles } from "../mui-treasury/info-n03";
 
-export interface PreviewCardProps {
+export interface ModalCardProps {
   imageSrc: StaticImageData;
   imageAlt: string;
-  year: string;
+  imageHref: string;
   eyebrow: string;
   title: string;
-  subtitle: string;
+  Content: React.FC;
+  onClose: () => void;
 }
 
-const PreviewCard: React.FC<PreviewCardProps> = ({
+const ModalCard: React.FC<ModalCardProps> = ({
   imageSrc,
   imageAlt,
-  year,
+  imageHref,
   eyebrow,
   title,
-  subtitle,
+  Content,
+  onClose,
 }) => (
   <Card
     variant="outlined"
     sx={{
       borderRadius: "20px",
+      maxWidth: "lg",
     }}
   >
     <Box sx={{ minWidth: 256 }}>
@@ -50,25 +49,23 @@ const PreviewCard: React.FC<PreviewCardProps> = ({
             height: "auto",
           }}
         >
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
+          <Link href={imageHref} target="_blank">
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </Link>
         </Box>
-        <Typography
-          sx={{
-            textTransform: "uppercase",
-            fontSize: 14,
-            color: "grey.500",
-            letterSpacing: "1px",
-          }}
+        <Button
+          onClick={onClose}
+          sx={{ borderRadius: "20px", p: 0, minWidth: 0 }}
         >
-          {year}
-        </Typography>
+          <CloseIcon sx={{ m: 1 }} />
+        </Button>
       </Box>
       <Box
         component="hr"
@@ -83,10 +80,10 @@ const PreviewCard: React.FC<PreviewCardProps> = ({
       <Info useStyles={getInfoN03Styles}>
         <InfoEyebrow>{eyebrow}</InfoEyebrow>
         <InfoTitle>{title}</InfoTitle>
-        <InfoSubtitle>{subtitle}</InfoSubtitle>
+        <Content />
       </Info>
     </CardContent>
   </Card>
 );
 
-export default PreviewCard;
+export default ModalCard;

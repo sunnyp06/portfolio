@@ -4,12 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 export type ModalCardProps = {
-  onClose?: () => void;
+  onClose: () => void;
 };
 
 export type AnimatedCardProps = {
   id: string;
-  PreviewCard: React.FC<ModalCardProps>;
+  PreviewCard: React.FC;
   ModalCard: React.FC<ModalCardProps>;
 };
 
@@ -55,11 +55,12 @@ export default function AnimatedCard({
         <AnimatePresence mode="sync">
           {isOpen && (
             <motion.div
+              key="modal"
               layoutId={`expandable-card-${id}`}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.2 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
               style={{
                 position: "absolute",
                 overflow: "auto",
