@@ -45,7 +45,8 @@ const PreviewCard: React.FC<PreviewCardProps> = ({
       >
         <Box
           sx={{
-            my: 1,
+            mb: 1,
+            mt: 2,
             width: 80,
             height: "auto",
           }}

@@ -32,7 +32,7 @@ export default function AnimatedCard({
             boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
             transition: "0.2s",
             "&:hover": {
-              transform: "scale(1.08)",
+              transform: "scale(1.04)",
               boxShadow: `0 6px 12px 0 rgba(0,0,0,0.3)`,
             },
           }}
