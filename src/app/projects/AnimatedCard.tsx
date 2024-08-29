@@ -47,14 +47,18 @@ export default function AnimatedCard({
         onClose={handleClose}
         closeAfterTransition
         sx={{
+          position: "fixed",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          maxWidth: "100vw",
+          overflow: "hidden",
         }}
       >
         <AnimatePresence mode="sync">
           {isOpen && (
             <motion.div
+              id="modal"
               key="modal"
               layoutId={`expandable-card-${id}`}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -62,8 +66,6 @@ export default function AnimatedCard({
               exit={{ opacity: 0, scale: 0.2 }}
               transition={{ duration: 0.2 }}
               style={{
-                position: "absolute",
-                overflow: "auto",
                 backgroundColor: "white",
                 borderRadius: "20px",
               }}

@@ -29,10 +29,13 @@ const ModalCard: React.FC<ModalCardProps> = ({
     variant="outlined"
     sx={{
       borderRadius: "20px",
-      maxWidth: "lg",
+      maxWidth: "md",
+      maxHeight: "90vh",
+      overflowY: "auto",
+      overflowX: "hidden",
     }}
   >
-    <Box sx={{ minWidth: 256 }}>
+    <Box>
       <Box
         sx={{
           px: 3,
@@ -44,7 +47,8 @@ const ModalCard: React.FC<ModalCardProps> = ({
       >
         <Box
           sx={{
-            my: 1,
+            mb: 1,
+            mt: 2,
             width: 80,
             height: "auto",
           }}
