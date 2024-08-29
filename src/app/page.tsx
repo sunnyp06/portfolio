@@ -1,8 +1,8 @@
-import Projects from "@/components/Projects";
 import SkillsGrid from "@/components/SkillsGrid";
 import { headingMinHeight } from "@/theme";
 import { Container, Stack, Typography } from "@mui/material";
 import { Typewriter } from "nextjs-simple-typewriter";
+import Projects from "./projects/Projects";
 
 export default function Home() {
   return (
