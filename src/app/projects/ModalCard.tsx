@@ -3,8 +3,8 @@ import { Box, Button, Card, CardContent } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Info, InfoEyebrow, InfoTitle } from "../mui-treasury/info-basic";
-import { getInfoN03Styles } from "../mui-treasury/info-n03";
+import { Info, InfoEyebrow, InfoTitle } from "../../mui-treasury/info-basic";
+import { getInfoN03Styles } from "../../mui-treasury/info-n03";
 
 export interface ModalCardProps {
   imageSrc: StaticImageData;

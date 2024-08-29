@@ -2,9 +2,9 @@
 import { Container, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import AnimatedCard from "./AnimatedCard";
-import { cardConfig } from "./cardConfig";
 import ModalCard from "./ModalCard";
 import PreviewCard from "./PreviewCard";
+import { projectCardConfig } from "./projectCardConfig";
 
 function Projects() {
   return (
@@ -13,7 +13,7 @@ function Projects() {
         Select Projects
       </Typography>
       <Grid2 container spacing={4} sx={{ mt: 6 }}>
-        {Object.values(cardConfig).map((config) => (
+        {Object.values(projectCardConfig).map((config) => (
           <Grid2 key={config.id} xs={12} sm={6} md={4}>
             <AnimatedCard
               id={config.id}

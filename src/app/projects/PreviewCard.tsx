@@ -7,8 +7,8 @@ import {
   InfoEyebrow,
   InfoSubtitle,
   InfoTitle,
-} from "../mui-treasury/info-basic";
-import { getInfoN03Styles } from "../mui-treasury/info-n03";
+} from "../../mui-treasury/info-basic";
+import { getInfoN03Styles } from "../../mui-treasury/info-n03";
 
 export interface PreviewCardProps {
   imageSrc: StaticImageData;

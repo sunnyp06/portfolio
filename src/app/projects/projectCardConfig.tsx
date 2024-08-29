@@ -10,7 +10,7 @@ export interface CardConfig {
   modalCard: Omit<ModalCardProps, "onClose">;
 }
 
-export const cardConfig: Record<string, CardConfig> = {
+export const projectCardConfig: Record<string, CardConfig> = {
   altruist1: {
     id: "portfolio-analytics",
     previewCard: {
@@ -20,7 +20,7 @@ export const cardConfig: Record<string, CardConfig> = {
       eyebrow: "Altruist Corp",
       title: "Portfolio Analytics",
       subtitle:
-        "A feature to provide clients with insights into asset class breakdowns, regional exposures, and performance, yield and risk metrics.",
+        "A feature to provide clients with insights into asset class breakdowns, regional exposures, and metrics such as performance, yield and risk.",
     },
     modalCard: {
       imageSrc: AltruistLogo,
