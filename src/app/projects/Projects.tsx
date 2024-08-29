@@ -18,8 +18,12 @@ function Projects() {
             <AnimatedCard
               id={config.id}
               PreviewCard={() => <PreviewCard {...config.previewCard} />}
-              ModalCard={({ onClose }) => (
-                <ModalCard {...config.modalCard} onClose={onClose} />
+              ModalCard={({ fullScreen, onClose }) => (
+                <ModalCard
+                  {...config.modalCard}
+                  fullScreen={fullScreen}
+                  onClose={onClose}
+                />
               )}
             />
           </Grid2>

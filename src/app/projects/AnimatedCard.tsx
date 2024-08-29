@@ -1,9 +1,10 @@
 "use client";
-import { CardActionArea, Modal } from "@mui/material";
+import { CardActionArea, Dialog, useMediaQuery, useTheme } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 export type ModalCardProps = {
+  fullScreen: boolean;
   onClose: () => void;
 };
 
@@ -22,6 +23,9 @@ export default function AnimatedCard({
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>
@@ -42,17 +46,23 @@ export default function AnimatedCard({
         </CardActionArea>
       </motion.div>
 
-      <Modal
+      <Dialog
         open={isOpen}
         onClose={handleClose}
+        fullScreen={fullScreen}
+        maxWidth="md"
+        fullWidth
         closeAfterTransition
+        PaperProps={{
+          sx: {
+            ...(!fullScreen && { borderRadius: "20px" }),
+          },
+        }}
         sx={{
           position: "fixed",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          maxWidth: "100vw",
-          overflow: "hidden",
         }}
       >
         <AnimatePresence mode="sync">
@@ -67,14 +77,13 @@ export default function AnimatedCard({
               transition={{ duration: 0.2 }}
               style={{
                 backgroundColor: "white",
-                borderRadius: "20px",
               }}
             >
-              <ModalCard onClose={handleClose} />
+              <ModalCard fullScreen={fullScreen} onClose={handleClose} />
             </motion.div>
           )}
         </AnimatePresence>
-      </Modal>
+      </Dialog>
     </>
   );
 }

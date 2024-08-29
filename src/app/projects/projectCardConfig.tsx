@@ -8,7 +8,7 @@ import { PreviewCardProps } from "./PreviewCard";
 export interface CardConfig {
   id: string;
   previewCard: PreviewCardProps;
-  modalCard: Omit<ModalCardProps, "onClose">;
+  modalCard: Omit<ModalCardProps, "onClose" | "fullScreen">;
 }
 
 export const projectCardConfig: Record<string, CardConfig> = {

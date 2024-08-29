@@ -13,6 +13,7 @@ export interface ModalCardProps {
   eyebrow: string;
   title: string;
   Content: React.FC;
+  fullScreen: boolean;
   onClose: () => void;
 }
 
@@ -23,18 +24,10 @@ const ModalCard: React.FC<ModalCardProps> = ({
   eyebrow,
   title,
   Content,
+  fullScreen,
   onClose,
 }) => (
-  <Card
-    variant="outlined"
-    sx={{
-      borderRadius: "20px",
-      maxWidth: "md",
-      maxHeight: "90vh",
-      overflowY: "auto",
-      overflowX: "hidden",
-    }}
-  >
+  <Card variant="outlined">
     <Box>
       <Box
         sx={{
