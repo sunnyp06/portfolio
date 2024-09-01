@@ -47,9 +47,9 @@ export const projectCardConfig: Record<string, CardConfig> = {
               selection and visualization of statistics and metrics.
             </Typography>
             <Typography component="li">
-              Researching and configuring the required vendor data feeds for
-              asset class, sector, regional breakdowns, size and style
-              exposures, credit ratings, and performance metrics.
+              Researching and configuring the required vendor data feeds (such
+              as asset class, sector, regional breakdowns, size and style
+              exposures, credit ratings, and performance metrics).
             </Typography>
             <Typography component="li">
               Helping to design and implement a robust, scale-able data ETL
@@ -117,9 +117,9 @@ export const projectCardConfig: Record<string, CardConfig> = {
             At Balyasny Asset Management, I developed an advanced research
             article query API and UI that combined Retrieval Augmented
             Generation (RAG) with vector-embeddings based search and traditional
-            tag-based search. This project significantly improved the efficiency
-            of accessing and understanding vast amounts of research data
-            available to the firm.
+            tag-based search. This project improved the efficiency of accessing
+            and understanding vast amounts of research data available to the
+            firm.
           </Typography>
           <Typography variant="body1" paragraph>
             Key features of the system included:
@@ -153,116 +153,108 @@ export const projectCardConfig: Record<string, CardConfig> = {
               context-aware article summaries and answering user queries
             </Typography>
             <Typography component="li">
-              Extensive prompt engineering to optimize LLM responses, including
+              Prompt engineering to optimize LLM responses, including
               experimenting with various prompts and creating examples of ideal
               responses to ensure correct formatting with accurate citations.
             </Typography>
             <Typography component="li">
-              Building a responsive frontend to display results effectively
+              Building a responsive frontend to display results effectively.
             </Typography>
             <Typography component="li">
               Developing a Slack bot that used the newly created API for daily
-              scheduled summaries of new articles, partitioned by
+              scheduled summaries of newly published articles, partitioned by
               market/product, leveraging prompt engineering to generate
               responses in Slack&apos;s Block Kit format for rich formatting.
             </Typography>
           </Box>
           <Typography variant="body1" paragraph>
-            The system significantly improved the research process at Balyasny,
-            allowing analysts to quickly find relevant information and gain
-            AI-augmented insights from a vast repository of research articles.
-            It became an essential tool for informed decision-making across
-            various investment teams.
+            The system improved the daily research process at Balyasny, allowing
+            analysts to better manage a deluge of information and quickly find
+            relevant information. Users were eager to expand the underlying
+            dataset, reflecting the utility of the tool.
           </Typography>
-          <Typography variant="body1" paragraph>
-            The date filter feature proved especially useful for getting quick
-            summaries of recent developments across a broad range of markets.
-            This capability, combined with the daily Slack summaries, enabled
-            analysts to stay up-to-date with the latest market trends and
-            research findings efficiently.
-          </Typography>
-          <Typography variant="body1" paragraph>
+          {/* <Typography variant="body1" paragraph>
             [Placeholder for visual mock: An image showcasing the user interface
             with the RAG-generated summary and source citations on one side, and
             vector-embeddings based search results on the other. The mock will
             also highlight the search filters available to users for refining
             their queries.]
-          </Typography>
+          </Typography> */}
         </Box>
       ),
     },
   },
-  bam: {
-    id: "factors",
-    previewCard: {
-      imageSrc: BamLogo,
-      imageAlt: "Balyasny Asset Management logo",
-      year: "2024",
-      eyebrow: "Balyasny Asset Management",
-      title: "Factor Risk & Attribution Model",
-      subtitle:
-        "A daily factor model for understanding position risk and performance in commodity futures trading.",
-    },
-    modalCard: {
-      imageSrc: BamLogo,
-      imageAlt: "Balyasny Asset Management logo",
-      imageHref: "https://www.bamfunds.com/",
-      eyebrow: "Balyasny Asset Management",
-      title: "Factor Risk & Attribution Model",
-      Content: () => (
-        <Box>
-          <Typography variant="body1" paragraph>
-            At Balyasny Asset Management, I developed a sophisticated daily
-            factor risk and attribution model for commodity futures trading.
-            This project was crucial for enhancing the understanding of position
-            risk, exposure and performance within the firm&apos;s commodities
-            division.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Key components of the project included:
-          </Typography>
-          <Box component="ul" sx={{ my: 2 }}>
-            <Typography component="li">
-              Collaborating with a senior quantitative researcher to refine the
-              model&apos;s technical specifications
-            </Typography>
-            <Typography component="li">
-              Designing and implementing modular backend logic to handle
-              complex, multi-tiered calculations
-            </Typography>
-            <Typography component="li">
-              Testing different regression techniques, and selecting one based
-              on performance and results
-            </Typography>
-            <Typography component="li">
-              Developing and deploying necessary APIs and Airflow DAGs for data
-              processing and model execution
-            </Typography>
-            <Typography component="li">
-              Developing a flexible portfolio processing system to handle
-              various instrument types and edge cases
-            </Typography>
-            <Typography component="li">
-              Creating a series of interactive dashboards with detailed grids,
-              charts, and time series visualizations
-            </Typography>
-          </Box>
-          <Typography variant="body1" paragraph>
-            The resulting application provided actionable insights through a set
-            of dashboards that applied the factor model to real portfolios. It
-            offered detailed analysis of risk and PnL attribution, as well as an
-            extendable API allowing other teams to integrate the underlying
-            model into their workflows.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            This project laid the foundation to improve the investment
-            team&apos;s ability to understand and manage risk, leading to more
-            informed decision-making and potentially improved trading outcomes.
-          </Typography>
-        </Box>
-      ),
-    },
-  },
+  // bam: {
+  //   id: "factors",
+  //   previewCard: {
+  //     imageSrc: BamLogo,
+  //     imageAlt: "Balyasny Asset Management logo",
+  //     year: "2024",
+  //     eyebrow: "Balyasny Asset Management",
+  //     title: "Factor Risk & Attribution Model",
+  //     subtitle:
+  //       "A daily factor model for understanding position risk and performance in commodity futures trading.",
+  //   },
+  //   modalCard: {
+  //     imageSrc: BamLogo,
+  //     imageAlt: "Balyasny Asset Management logo",
+  //     imageHref: "https://www.bamfunds.com/",
+  //     eyebrow: "Balyasny Asset Management",
+  //     title: "Factor Risk & Attribution Model",
+  //     Content: () => (
+  //       <Box>
+  //         <Typography variant="body1" paragraph>
+  //           At Balyasny Asset Management, I developed a sophisticated daily
+  //           factor risk and attribution model for commodity futures trading.
+  //           This project was crucial for enhancing the understanding of position
+  //           risk, exposure and performance within the firm&apos;s commodities
+  //           division.
+  //         </Typography>
+  //         <Typography variant="body1" paragraph>
+  //           Key components of the project included:
+  //         </Typography>
+  //         <Box component="ul" sx={{ my: 2 }}>
+  //           <Typography component="li">
+  //             Collaborating with a senior quantitative researcher to refine the
+  //             model&apos;s technical specifications
+  //           </Typography>
+  //           <Typography component="li">
+  //             Designing and implementing modular backend logic to handle
+  //             complex, multi-tiered calculations
+  //           </Typography>
+  //           <Typography component="li">
+  //             Testing different regression techniques, and selecting one based
+  //             on performance and results
+  //           </Typography>
+  //           <Typography component="li">
+  //             Developing and deploying necessary APIs and Airflow DAGs for data
+  //             processing and model execution
+  //           </Typography>
+  //           <Typography component="li">
+  //             Developing a flexible portfolio processing system to handle
+  //             various instrument types and edge cases
+  //           </Typography>
+  //           <Typography component="li">
+  //             Creating a series of interactive dashboards with detailed grids,
+  //             charts, and time series visualizations
+  //           </Typography>
+  //         </Box>
+  //         <Typography variant="body1" paragraph>
+  //           The resulting application provided actionable insights through a set
+  //           of dashboards that applied the factor model to real portfolios. It
+  //           offered detailed analysis of risk and PnL attribution, as well as an
+  //           extendable API allowing other teams to integrate the underlying
+  //           model into their workflows.
+  //         </Typography>
+  //         <Typography variant="body1" paragraph>
+  //           This project laid the foundation to improve the investment
+  //           team&apos;s ability to understand and manage risk, leading to more
+  //           informed decision-making and potentially improved trading outcomes.
+  //         </Typography>
+  //       </Box>
+  //     ),
+  //   },
+  // },
 };
 
 // holdings performance
