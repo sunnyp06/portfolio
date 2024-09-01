@@ -18,7 +18,7 @@ const IconLink: React.FC<IconLinkProps> = ({
   <Link
     href={href}
     target="_blank"
-    rel="noopener"
+    rel="noopener noreferrer"
     display="flex"
     alignItems="center"
     color="primary.main"
