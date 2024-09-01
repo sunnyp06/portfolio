@@ -13,87 +13,6 @@ export interface CardConfig {
 }
 
 export const projectCardConfig: Record<string, CardConfig> = {
-  portfolioAnalytics: {
-    id: "portfolio-analytics",
-    previewCard: {
-      imageSrc: AltruistLogo,
-      imageAlt: "Altruist logo",
-      year: "2023",
-      eyebrow: "Altruist Corp",
-      title: "Portfolio Analytics",
-      subtitle:
-        "A feature to provide clients with insights into asset class breakdowns, regional exposures, and metrics such as performance, yield and risk.",
-    },
-    modalCard: {
-      imageSrc: AltruistLogo,
-      imageAlt: "Altruist logo",
-      imageHref: "https://altruist.com/",
-      eyebrow: "Altruist Corp",
-      title: "Portfolio Analytics",
-      Content: () => (
-        <Box>
-          <Typography variant="body1" paragraph>
-            As a Software Engineer at Altruist, I helped develop a comprehensive
-            portfolio analytics feature designed to provide financial advisors
-            and their clients with insights into the composition and performance
-            of their investment portfolios.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            My key contributions to the project included:
-          </Typography>
-          <Box component="ul" sx={{ my: 2 }}>
-            <Typography component="li">
-              Collaborating with the product manager and designer to refine the
-              selection and visualization of statistics and metrics.
-            </Typography>
-            <Typography component="li">
-              Researching and configuring the required vendor data feeds (such
-              as asset class, sector, regional breakdowns, size and style
-              exposures, credit ratings, and performance metrics).
-            </Typography>
-            <Typography component="li">
-              Helping to design and implement a robust, scale-able data ETL
-              pipeline using Airflow DAGs, S3, Snowflake, PostgreSQL, fivetran
-              (replication), and dbt, balancing extensibility, cost, and level
-              of effort.
-            </Typography>
-            <Typography component="li">
-              Leading the team by developing the backend business logic, within
-              a flexible framework to handle analysis on accounts, households,
-              benchmarks, and model portfolios, serving as the example for the
-              team to replicate.
-            </Typography>
-            <Typography component="li">
-              Creating a centralized performance analytics library to ensure
-              consistency across the platform for metrics such as time-weighted
-              returns, volatility, Sharpe ratio, capture ratios, max drawdown,
-              beta etc.
-            </Typography>
-          </Box>
-          <Typography variant="body1" paragraph>
-            The feature was well-received by clients, filling a known gap with
-            an intuitive presentation of critical investment information. It
-            enhanced the platform&apos;s value proposition and improved
-            decision-making capabilities for financial advisors and their
-            clients.
-          </Typography>
-          <Typography variant="body1" paragraph display="flex">
-            Learn more about Altruist&apos;s Portfolio Analytics:
-            <IconLink
-              href="https://altruist.com/portfolio-reporting/#:~:text=with%20appropriate%20context.-,Portfolio%20analytics,-Visualize%20portfolio%20risk"
-              icon={LooksOneIcon}
-              fontSize={24}
-            />
-            <IconLink
-              href="https://blog.altruist.com/news/whats-new-in-may#:~:text=Advanced%20Analytics%20upgrades"
-              icon={LooksTwoIcon}
-              fontSize={24}
-            />
-          </Typography>
-        </Box>
-      ),
-    },
-  },
   ragResearchArticles: {
     id: "rag-research-articles",
     previewCard: {
@@ -184,6 +103,178 @@ export const projectCardConfig: Record<string, CardConfig> = {
       ),
     },
   },
+  portfolioAnalytics: {
+    id: "portfolio-analytics",
+    previewCard: {
+      imageSrc: AltruistLogo,
+      imageAlt: "Altruist logo",
+      year: "2023",
+      eyebrow: "Altruist Corp",
+      title: "Portfolio Analytics",
+      subtitle:
+        "A feature to provide clients with insights into asset class breakdowns, regional exposures, and metrics such as performance, yield and risk.",
+    },
+    modalCard: {
+      imageSrc: AltruistLogo,
+      imageAlt: "Altruist logo",
+      imageHref: "https://altruist.com/",
+      eyebrow: "Altruist Corp",
+      title: "Portfolio Analytics",
+      Content: () => (
+        <Box>
+          <Typography variant="body1" paragraph>
+            As a Software Engineer at Altruist, I helped develop a comprehensive
+            portfolio analytics feature designed to provide financial advisors
+            and their clients with insights into the composition and performance
+            of their investment portfolios.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            My key contributions to the project included:
+          </Typography>
+          <Box component="ul" sx={{ my: 2 }}>
+            <Typography component="li">
+              Collaborating with the product manager and designer to refine the
+              selection and visualization of statistics and metrics.
+            </Typography>
+            <Typography component="li">
+              Researching and configuring the required vendor data feeds (such
+              as asset class, sector, regional breakdowns, size and style
+              exposures, credit ratings, and performance metrics).
+            </Typography>
+            <Typography component="li">
+              Helping to design and implement a robust, scale-able data ETL
+              pipeline using Airflow DAGs, S3, Snowflake, PostgreSQL, fivetran
+              (replication), and dbt, balancing extensibility, cost, and level
+              of effort.
+            </Typography>
+            <Typography component="li">
+              Leading the team by developing the backend business logic, within
+              a flexible framework to handle analysis on accounts, households,
+              benchmarks, and model portfolios, serving as the example for the
+              team to replicate.
+            </Typography>
+            <Typography component="li">
+              Creating a centralized performance analytics library to ensure
+              consistency across the platform for metrics such as time-weighted
+              returns, volatility, Sharpe ratio, capture ratios, max drawdown,
+              beta etc.
+            </Typography>
+          </Box>
+          <Typography variant="body1" paragraph>
+            The feature was well-received by clients, filling a known gap with
+            an intuitive presentation of critical investment information. It
+            enhanced the platform&apos;s value proposition and improved
+            decision-making capabilities for financial advisors and their
+            clients.
+          </Typography>
+          <Typography variant="body1" paragraph display="flex">
+            Learn more about Altruist&apos;s Portfolio Analytics:
+            <IconLink
+              href="https://altruist.com/portfolio-reporting/#:~:text=with%20appropriate%20context.-,Portfolio%20analytics,-Visualize%20portfolio%20risk"
+              icon={LooksOneIcon}
+              fontSize={24}
+            />
+            <IconLink
+              href="https://blog.altruist.com/news/whats-new-in-may#:~:text=Advanced%20Analytics%20upgrades"
+              icon={LooksTwoIcon}
+              fontSize={24}
+            />
+          </Typography>
+        </Box>
+      ),
+    },
+  },
+
+  positionLevelPerformance: {
+    id: "position-level-performance",
+    previewCard: {
+      imageSrc: AltruistLogo,
+      imageAlt: "Altruist logo",
+      year: "2023",
+      eyebrow: "Altruist Corp",
+      title: "Position Level Performance Attribution",
+      subtitle:
+        "A feature to provide detailed performance breakdown at the individual position level, enabling advisors to analyze and understand performance drivers.",
+    },
+    modalCard: {
+      imageSrc: AltruistLogo,
+      imageAlt: "Altruist logo",
+      imageHref: "https://altruist.com/",
+      eyebrow: "Altruist Corp",
+      title: "Position Level Performance Attribution",
+      Content: () => (
+        <Box>
+          <Typography variant="body1" paragraph>
+            As a Software Engineer at Altruist, I spearheaded the development of
+            a highly requested position-level performance attribution feature.
+            This feature provided financial advisors with detailed insights into
+            the performance of individual positions within their clients&apos;
+            portfolios.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Key aspects of the project included:
+          </Typography>
+          <Box component="ul" sx={{ my: 2 }}>
+            <Typography component="li">
+              Initiating the project by recognizing its importance and
+              advocating for its inclusion in the product roadmap.
+            </Typography>
+            <Typography component="li">
+              Analyzing positions and transactions data across all custodians,
+              and defining fault-tolerant algorithms used to compute the
+              earnings, time-weighted returns attributions and
+              accrual-accounting adjustments.
+            </Typography>
+            <Typography component="li">
+              Designing and implementing a robust ETL procedure to precompute
+              daily accrued/actual values and earnings at the position and
+              account level.
+            </Typography>
+            <Typography component="li">
+              Creating a RESTful API to serve the precomputed data and calculate
+              time-weighted returns and cumulative return attributions
+              on-the-fly based on the requested date range.
+            </Typography>
+            <Typography component="li">
+              Implementing comprehensive unit tests to ensure data accuracy and
+              system reliability.
+            </Typography>
+            <Typography component="li">
+              Continuing to monitor API latency, failures and user feedback.
+            </Typography>
+          </Box>
+          {/* <Typography variant="body1" paragraph>
+            A key challenge was optimizing the feature&apos;s performance.
+            Initially, the UI was taking 10-60 seconds to load. After
+            investigating the query execution plan, I implemented a
+            micro-clustering key to group data by search predicate parameters.
+            This optimization reduced loading times to less than 5 seconds,
+            significantly enhancing the user experience.
+          </Typography> */}
+          <Typography variant="body1" paragraph>
+            The position-level performance attribution feature marked a
+            significant improvement in Altruist&apos;s offering, filling a
+            well-known gap and enhancing advisors&apos; ability to analyze and
+            understand performance drivers.
+          </Typography>
+          {/* <Typography variant="body1" paragraph>
+            This project showcased my ability to lead complex feature
+            development from conception to delivery, balancing technical
+            implementation with user needs and business priorities.
+          </Typography> */}
+          <Typography variant="body1" paragraph display="flex">
+            Learn more about Altruist&apos;s Position Level Performance
+            Attribution:
+            <IconLink
+              href="https://blog.altruist.com/news/whats-new-in-august#:~:text=seat%20here.-,Newly%20added%20holdings%2Dlevel%20performance,-Say%20hello%20to"
+              icon={LooksOneIcon}
+              fontSize={24}
+            />
+          </Typography>
+        </Box>
+      ),
+    },
+  },
   // bam: {
   //   id: "factors",
   //   previewCard: {
@@ -259,9 +350,5 @@ export const projectCardConfig: Record<string, CardConfig> = {
 
 // holdings performance
 {
-  /* <IconLink
-href="https://blog.altruist.com/news/whats-new-in-august#:~:text=seat%20here.-,Newly%20added%20holdings%2Dlevel%20performance,-Say%20hello%20to"
-icon={LooksOneIcon}
-fontSize={24}
-/> */
+  /* */
 }
