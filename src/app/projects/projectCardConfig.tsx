@@ -35,10 +35,10 @@ export const projectCardConfig: Record<string, CardConfig> = {
           <Typography variant="body1" paragraph>
             At Balyasny Asset Management, I developed an advanced research
             article query API and UI that combined Retrieval Augmented
-            Generation (RAG) with vector-embeddings based search and traditional
-            tag-based search. This project improved the efficiency of accessing
-            and understanding vast amounts of research data available to the
-            firm.
+            Generation (RAG) with vector-embeddings (semantic) search and
+            traditional keyword-based search. This project improved the
+            efficiency of accessing and understanding vast amounts of research
+            data available to the firm.
           </Typography>
           <Typography variant="body1" paragraph>
             Key features of the system included:
@@ -52,8 +52,8 @@ export const projectCardConfig: Record<string, CardConfig> = {
               Vector-embeddings based search for highly relevant results.
             </Typography>
             <Typography component="li">
-              Traditional tag-based search with a tag expansion algorithm for
-              broader and more customizable coverage.
+              Traditional keyword-based search with a keyword expansion
+              algorithm for broader and more customizable coverage.
             </Typography>
             <Typography component="li">
               A user-friendly interface displaying AI responses, source
@@ -216,8 +216,9 @@ export const projectCardConfig: Record<string, CardConfig> = {
           </Typography>
           <Box component="ul" sx={{ my: 2 }}>
             <Typography component="li">
-              Initiating the project by recognizing its importance and
-              advocating for its inclusion in the product roadmap.
+              Initiating the project by recognizing that it was initially
+              overlooked, re-evaluating its feasibility, and advocating for its
+              inclusion in the product roadmap.
             </Typography>
             <Typography component="li">
               Analyzing positions and transactions data across all custodians,
@@ -232,39 +233,28 @@ export const projectCardConfig: Record<string, CardConfig> = {
             </Typography>
             <Typography component="li">
               Creating a RESTful API to serve the precomputed data and calculate
-              time-weighted returns and cumulative return attributions
-              on-the-fly based on the requested date range.
+              the attributions on-the-fly based on the requested date range.
             </Typography>
             <Typography component="li">
-              Implementing comprehensive unit tests to ensure data accuracy and
-              system reliability.
+              Implementing comprehensive unit tests to ensure correctness and
+              edge case coverage.
+            </Typography>
+            <Typography component="li">
+              Investigating the query execution plan and implementing a
+              micro-clustering key to drastically reduce loading times.
             </Typography>
             <Typography component="li">
               Continuing to monitor API latency, failures and user feedback.
             </Typography>
           </Box>
-          {/* <Typography variant="body1" paragraph>
-            A key challenge was optimizing the feature&apos;s performance.
-            Initially, the UI was taking 10-60 seconds to load. After
-            investigating the query execution plan, I implemented a
-            micro-clustering key to group data by search predicate parameters.
-            This optimization reduced loading times to less than 5 seconds,
-            significantly enhancing the user experience.
-          </Typography> */}
           <Typography variant="body1" paragraph>
-            The position-level performance attribution feature marked a
-            significant improvement in Altruist&apos;s offering, filling a
-            well-known gap and enhancing advisors&apos; ability to analyze and
-            understand performance drivers.
+            This feature marked a significant improvement in Altruist&apos;s
+            performance reporting offering, filling a well-known gap and
+            enhancing advisors&apos; ability to analyze and understand
+            performance drivers.
           </Typography>
-          {/* <Typography variant="body1" paragraph>
-            This project showcased my ability to lead complex feature
-            development from conception to delivery, balancing technical
-            implementation with user needs and business priorities.
-          </Typography> */}
           <Typography variant="body1" paragraph display="flex">
-            Learn more about Altruist&apos;s Position Level Performance
-            Attribution:
+            Learn more about Altruist&apos;s Position Level Performance:
             <IconLink
               href="https://blog.altruist.com/news/whats-new-in-august#:~:text=seat%20here.-,Newly%20added%20holdings%2Dlevel%20performance,-Say%20hello%20to"
               icon={LooksOneIcon}
@@ -347,8 +337,3 @@ export const projectCardConfig: Record<string, CardConfig> = {
   //   },
   // },
 };
-
-// holdings performance
-{
-  /* */
-}
