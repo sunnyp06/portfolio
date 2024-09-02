@@ -13,6 +13,96 @@ export interface CardConfig {
 }
 
 export const projectCardConfig: Record<string, CardConfig> = {
+  ragResearchArticles: {
+    id: "rag-research-articles",
+    previewCard: {
+      imageSrc: BamLogo,
+      imageAlt: "Balyasny Asset Management logo",
+      year: "2024",
+      eyebrow: "Balyasny Asset Management",
+      title: "AI-Powered Research Article Search",
+      subtitle:
+        "A system for intelligent search and summarization of research articles using Retrieval Augmented Generation and vector-embeddings based search techniques.",
+    },
+    modalCard: {
+      imageSrc: BamLogo,
+      imageAlt: "Balyasny Asset Management logo",
+      imageHref: "https://www.bamfunds.com/",
+      eyebrow: "Balyasny Asset Management",
+      title: "AI-Powered Research Article Search",
+      Content: () => (
+        <Box>
+          <Typography variant="body1" paragraph>
+            At Balyasny Asset Management, I developed an advanced research
+            article query API and UI that combined Retrieval Augmented
+            Generation (RAG) with vector-embeddings (semantic) search and
+            traditional keyword-based search. This project improved the
+            efficiency of accessing and understanding vast amounts of research
+            data available to the firm.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Key features of the system included:
+          </Typography>
+          <Box component="ul" sx={{ my: 2 }}>
+            <Typography component="li">
+              RAG using research articles for summaries and answers to user
+              queries, with source citations.
+            </Typography>
+            <Typography component="li">
+              Vector-embeddings based search for highly relevant results.
+            </Typography>
+            <Typography component="li">
+              Traditional keyword-based search with a keyword expansion
+              algorithm for broader and more customizable coverage.
+            </Typography>
+            <Typography component="li">
+              A user-friendly interface displaying AI responses, source
+              citations, and search results side-by-side.
+            </Typography>
+            <Typography component="li">
+              Customizable search filters for refining results.
+            </Typography>
+          </Box>
+          <Typography variant="body1" paragraph>
+            The project involved:
+          </Typography>
+          <Box component="ul" sx={{ my: 2 }}>
+            <Typography component="li">
+              Implementing RAG using OpenAI&apos;s API for generating
+              context-aware article summaries and answering user queries
+            </Typography>
+            <Typography component="li">
+              Prompt engineering to optimize LLM responses, including
+              experimenting with various prompts and creating examples of ideal
+              responses to ensure correct formatting with accurate citations.
+            </Typography>
+            <Typography component="li">
+              Building a responsive frontend to display results effectively.
+            </Typography>
+            <Typography component="li">
+              Developing a Slack bot that used the newly created API for daily
+              scheduled summaries of newly published articles, partitioned by
+              market/product, leveraging prompt engineering to generate
+              responses in Slack&apos;s Block Kit format for rich formatting.
+            </Typography>
+          </Box>
+          <Typography variant="body1" paragraph>
+            The system improved the daily research process at Balyasny, allowing
+            analysts to better manage a deluge of information and quickly find
+            relevant information. Users were eager to expand the underlying
+            dataset, reflecting the utility of the tool.
+          </Typography>
+          {/* <Typography variant="body1" paragraph>
+            [Placeholder for visual mock: An image showcasing the user interface
+            with the RAG-generated summary and source citations on one side, and
+            vector-embeddings based search results on the other. The mock will
+            also highlight the search filters available to users for refining
+            their queries.]
+          </Typography> */}
+        </Box>
+      ),
+    },
+  },
   portfolioAnalytics: {
     id: "portfolio-analytics",
     previewCard: {
@@ -94,92 +184,83 @@ export const projectCardConfig: Record<string, CardConfig> = {
       ),
     },
   },
-  ragResearchArticles: {
-    id: "rag-research-articles",
+
+  positionLevelPerformance: {
+    id: "position-level-performance",
     previewCard: {
-      imageSrc: BamLogo,
-      imageAlt: "Balyasny Asset Management logo",
-      year: "2024",
-      eyebrow: "Balyasny Asset Management",
-      title: "AI-Powered Research Article Search",
+      imageSrc: AltruistLogo,
+      imageAlt: "Altruist logo",
+      year: "2023",
+      eyebrow: "Altruist Corp",
+      title: "Position Level Performance Attribution",
       subtitle:
-        "A system for intelligent search and summarization of research articles using Retrieval Augmented Generation and vector-embeddings based search techniques.",
+        "A feature to provide detailed performance breakdown at the individual position level, enabling advisors to analyze and understand performance drivers.",
     },
     modalCard: {
-      imageSrc: BamLogo,
-      imageAlt: "Balyasny Asset Management logo",
-      imageHref: "https://www.bamfunds.com/",
-      eyebrow: "Balyasny Asset Management",
-      title: "AI-Powered Research Article Search",
+      imageSrc: AltruistLogo,
+      imageAlt: "Altruist logo",
+      imageHref: "https://altruist.com/",
+      eyebrow: "Altruist Corp",
+      title: "Position Level Performance Attribution",
       Content: () => (
         <Box>
           <Typography variant="body1" paragraph>
-            At Balyasny Asset Management, I developed an advanced research
-            article query API and UI that combined Retrieval Augmented
-            Generation (RAG) with vector-embeddings based search and traditional
-            tag-based search. This project improved the efficiency of accessing
-            and understanding vast amounts of research data available to the
-            firm.
+            As a Software Engineer at Altruist, I spearheaded the development of
+            a highly requested position-level performance attribution feature.
+            This feature provided financial advisors with detailed insights into
+            the performance of individual positions within their clients&apos;
+            portfolios.
           </Typography>
           <Typography variant="body1" paragraph>
-            Key features of the system included:
+            Key aspects of the project included:
           </Typography>
           <Box component="ul" sx={{ my: 2 }}>
             <Typography component="li">
-              RAG using research articles for summaries and answers to user
-              queries, with source citations.
+              Initiating the project by recognizing that it was initially
+              overlooked, re-evaluating its feasibility, and advocating for its
+              inclusion in the product roadmap.
             </Typography>
             <Typography component="li">
-              Vector-embeddings based search for highly relevant results.
+              Analyzing positions and transactions data across all custodians,
+              and defining fault-tolerant algorithms used to compute the
+              earnings, time-weighted returns attributions and
+              accrual-accounting adjustments.
             </Typography>
             <Typography component="li">
-              Traditional tag-based search with a tag expansion algorithm for
-              broader and more customizable coverage.
+              Designing and implementing a robust ETL procedure to precompute
+              daily accrued/actual values and earnings at the position and
+              account level.
             </Typography>
             <Typography component="li">
-              A user-friendly interface displaying AI responses, source
-              citations, and search results side-by-side.
+              Creating a RESTful API to serve the precomputed data and calculate
+              the attributions on-the-fly based on the requested date range.
             </Typography>
             <Typography component="li">
-              Customizable search filters for refining results.
+              Implementing comprehensive unit tests to ensure correctness and
+              edge case coverage.
+            </Typography>
+            <Typography component="li">
+              Investigating the query execution plan and implementing a
+              micro-clustering key to drastically reduce loading times.
+            </Typography>
+            <Typography component="li">
+              Continuing to monitor API latency, failures and user feedback.
             </Typography>
           </Box>
           <Typography variant="body1" paragraph>
-            The project involved:
+            This feature marked a significant improvement in Altruist&apos;s
+            performance reporting offering, filling a well-known gap and
+            enhancing advisors&apos; ability to analyze and understand
+            performance drivers.
           </Typography>
-          <Box component="ul" sx={{ my: 2 }}>
-            <Typography component="li">
-              Implementing RAG using OpenAI&apos;s API for generating
-              context-aware article summaries and answering user queries
-            </Typography>
-            <Typography component="li">
-              Prompt engineering to optimize LLM responses, including
-              experimenting with various prompts and creating examples of ideal
-              responses to ensure correct formatting with accurate citations.
-            </Typography>
-            <Typography component="li">
-              Building a responsive frontend to display results effectively.
-            </Typography>
-            <Typography component="li">
-              Developing a Slack bot that used the newly created API for daily
-              scheduled summaries of newly published articles, partitioned by
-              market/product, leveraging prompt engineering to generate
-              responses in Slack&apos;s Block Kit format for rich formatting.
-            </Typography>
-          </Box>
-          <Typography variant="body1" paragraph>
-            The system improved the daily research process at Balyasny, allowing
-            analysts to better manage a deluge of information and quickly find
-            relevant information. Users were eager to expand the underlying
-            dataset, reflecting the utility of the tool.
+          <Typography variant="body1" paragraph display="flex">
+            Learn more about Altruist&apos;s Position Level Performance:
+            <IconLink
+              href="https://blog.altruist.com/news/whats-new-in-august#:~:text=seat%20here.-,Newly%20added%20holdings%2Dlevel%20performance,-Say%20hello%20to"
+              icon={LooksOneIcon}
+              fontSize={24}
+            />
           </Typography>
-          {/* <Typography variant="body1" paragraph>
-            [Placeholder for visual mock: An image showcasing the user interface
-            with the RAG-generated summary and source citations on one side, and
-            vector-embeddings based search results on the other. The mock will
-            also highlight the search filters available to users for refining
-            their queries.]
-          </Typography> */}
         </Box>
       ),
     },
@@ -256,12 +337,3 @@ export const projectCardConfig: Record<string, CardConfig> = {
   //   },
   // },
 };
-
-// holdings performance
-{
-  /* <IconLink
-href="https://blog.altruist.com/news/whats-new-in-august#:~:text=seat%20here.-,Newly%20added%20holdings%2Dlevel%20performance,-Say%20hello%20to"
-icon={LooksOneIcon}
-fontSize={24}
-/> */
-}
